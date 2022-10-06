@@ -51,6 +51,8 @@ const generateFilter = (options) => {
 }
 
 const replaceCode = (code, id, pattern, functionValues) => {
+  let match;
+  
   const magicString = new MagicString(code);
   while ((match = pattern.exec(code))) {
     const start = match.index;
